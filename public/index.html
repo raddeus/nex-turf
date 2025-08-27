@@ -1,15 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empty Page</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nex Turf — Premium Synthetic Turf Supply</title>
+  <meta name="description" content="Premium synthetic turf supply for residential, commercial, pet, play, and sports applications. Fast shipping, installer-first pricing, and real support." />
+
+  <!-- Favicon (full logo, per your preference) -->
+  <link rel="icon" type="image/png" href="https://i.ibb.co/6JNWZQ5w/Nex-Turf-Logo-Transparent.png" />
+
+  <!-- Google Fonts (warm + modern) -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (icons) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <!-- If working locally, keep this link. In CodePen, paste CSS into the CSS panel and you can remove this line. -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome2</h1>
-        <p>This is an empty HTML page.</p>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" role="banner">
+    <!-- Top phone bar -->
+    <div class="topbar">
+      <div class="container topbar-inner">
+        <a class="phone" href="tel:+14790000000"><i class="fa-solid fa-phone"></i> <strong>(479) 000‑0000</strong></a>
+        <div class="topbar-right">
+          <a href="#contact" class="tiny-link"><i class="fa-solid fa-envelope"></i> Email</a>
+          <a href="#contact" class="tiny-link"><i class="fa-solid fa-location-dot"></i> Service Areas</a>
+          <button class="tiny-btn" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+      </div>
     </div>
+
+    <!-- Centered brand bar -->
+    <div class="brandbar">
+      <div class="container brandbar-inner">
+        <a class="brand" href="#home" aria-label="Nex Turf home">
+          <img src="https://i.ibb.co/6JNWZQ5w/Nex-Turf-Logo-Transparent.png" alt="Nex Turf" width="170" height="42">
+        </a>
+      </div>
+    </div>
+
+    <!-- Main nav row -->
+    <div class="navrow">
+      <div class="container navrow-inner">
+        <!-- Mobile toggle -->
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+        <label for="nav-toggle" class="hamburger" aria-hidden="true"><span></span><span></span><span></span></label>
+
+        <nav class="nav" aria-label="Main navigation">
+          <ul class="nav-list">
+            <li><a href="#industries">Applications</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#why">Solutions</a></li>
+            <li><a href="#contact">Resources</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-cta">
+          <a class="btn btn-outline-light" href="#contact">Contact</a>
+          <a class="btn btn-green" href="#contact">Start Your Project</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO (background video) ============ -->
+    <section id="home" class="hero" aria-labelledby="hero-title">
+      <!-- Your hosted MP4 via Google Drive direct link -->
+      <video class="hero-video" autoplay muted loop playsinline
+             poster="https://images.unsplash.com/photo-1518606350760-7e8f0f7f1df4?q=80&w=2000&auto=format&fit=crop">
+        <source src="https://drive.google.com/uc?export=download&id=1rVMokwuMSWKtg3QAJqqVGvffX0n-itUa" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <!-- Dark overlay above the video -->
+      <div class="hero-overlay"></div>
+
+      <!-- Hero content -->
+      <div class="container hero-inner">
+        <p class="kicker">The</p>
+        <h1 id="hero-title"><span class="smart">SMARTEST</span><br><span class="sub">way to source synthetic turf</span></h1>
+        <p class="hero-copy">Installer‑first supply with fast logistics, consistent quality, and real people supporting every job.</p>
+
+        <div class="hero-ctas">
+          <a class="btn btn-green" href="#contact">Get a Quote</a>
+          <a class="btn btn-outline-cream" href="#products">Browse Products</a>
+        </div>
+      </div>
+
+      <!-- Partner logos strip (placeholders; replace as needed) -->
+      <div class="partners">
+        <div class="container partners-inner">
+          <img src="https://dummyimage.com/120x40/2b2b2b/ffffff&text=Zoo" alt="Partner logo">
+          <img src="https://dummyimage.com/120x40/2b2b2b/ffffff&text=Hotel" alt="Partner logo">
+          <img src="https://dummyimage.com/120x40/2b2b2b/ffffff&text=Yale" alt="Partner logo">
+          <img src="https://dummyimage.com/120x40/2b2b2b/ffffff&text=Retail" alt="Partner logo">
+          <img src="https://dummyimage.com/120x40/2b2b2b/ffffff&text=Auto" alt="Partner logo">
+          <img src="https://dummyimage.com/120x40/2b2b2b/ffffff&text=Disney" alt="Partner logo">
+        </div>
+      </div>
+
+      <!-- Audience pill switcher -->
+      <div class="audience">
+        <div class="container audience-inner">
+          <a href="#industries" class="pill active"><i class="fa-solid fa-house-chimney"></i> Homeowners</a>
+          <a href="#industries" class="pill"><i class="fa-solid fa-briefcase"></i> Business Owners</a>
+          <a href="#industries" class="pill"><i class="fa-solid fa-compass-drafting"></i> Architects</a>
+          <a href="#industries" class="pill"><i class="fa-solid fa-landmark"></i> Municipalities</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ APPLICATIONS ============ -->
+    <section id="industries" class="section industries" aria-labelledby="industries-title">
+      <div class="container">
+        <h2 id="industries-title">Applications</h2>
+        <p class="section-intro">From cozy backyards to heavy‑traffic public spaces, Nex Turf carries lines optimized for the way you use them.</p>
+
+        <div class="card-grid">
+          <article class="card">
+            <i class="fa-solid fa-house-chimney"></i>
+            <h3>Residential Lawns</h3>
+            <p>Soft hand feel, natural color blends, and low‑gloss fibers that look right at home.</p>
+          </article>
+          <article class="card">
+            <i class="fa-solid fa-building"></i>
+            <h3>Commercial</h3>
+            <p>Durable turf for rooftops, courtyards, and retail environments with steady foot traffic.</p>
+          </article>
+          <article class="card">
+            <i class="fa-solid fa-paw"></i>
+            <h3>Pet</h3>
+            <p>Permeable backings and dense thatch layers for easier cleanup and odor management.</p>
+          </article>
+          <article class="card">
+            <i class="fa-solid fa-children"></i>
+            <h3>Playgrounds</h3>
+            <p>Impact‑friendly systems designed for play areas when paired with proper underlayment.</p>
+          </article>
+          <article class="card">
+            <i class="fa-solid fa-basketball"></i>
+            <h3>Sports</h3>
+            <p>Stable, consistent surfaces for training lanes, agility zones, and multi‑use fields.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRODUCTS ============ -->
+    <section id="products" class="section products" aria-labelledby="products-title">
+      <div class="container">
+        <h2 id="products-title">Featured Turf Lines</h2>
+        <p class="section-intro">A quick look at a few customer favorites. Full spec sheets available upon request.</p>
+
+        <div class="product-grid">
+          <article class="product">
+            <img src="https://images.unsplash.com/photo-1523419409543-a7bb1f0f2c2a?q=80&w=1200&auto=format&fit=crop" alt="Nex Pro 70 turf sample" loading="lazy">
+            <div class="product-body">
+              <h3>Nex Pro 70</h3>
+              <ul class="specs" role="list">
+                <li><i class="fa-solid fa-ruler"></i> Pile Height: ~1.75"</li>
+                <li><i class="fa-solid fa-weight-hanging"></i> Face Weight: ~70 oz</li>
+                <li><i class="fa-solid fa-droplet"></i> Permeable Backing</li>
+                <li><i class="fa-solid fa-up-right-and-down-left-from-center"></i> Roll: 15' width</li>
+              </ul>
+              <a class="link" href="#" aria-disabled="true">Request spec sheet</a>
+            </div>
+          </article>
+
+          <article class="product">
+            <img src="https://images.unsplash.com/photo-1523419179822-d4f8b18fe6f9?q=80&w=1200&auto=format&fit=crop" alt="Nex Pet 60 turf sample" loading="lazy">
+            <div class="product-body">
+              <h3>Nex Pet 60</h3>
+              <ul class="specs" role="list">
+                <li><i class="fa-solid fa-ruler"></i> Pile Height: ~1.5"</li>
+                <li><i class="fa-solid fa-weight-hanging"></i> Face Weight: ~60 oz</li>
+                <li><i class="fa-solid fa-spray-can-sparkles"></i> Anti‑microbial infill compatible</li>
+                <li><i class="fa-solid fa-up-right-and-down-left-from-center"></i> Roll: 15' width</li>
+              </ul>
+              <a class="link" href="#" aria-disabled="true">Request spec sheet</a>
+            </div>
+          </article>
+
+          <article class="product">
+            <img src="https://images.unsplash.com/photo-1508093757-7fcd6c3b1f2b?q=80&w=1200&auto=format&fit=crop" alt="Nex Play 50 turf sample" loading="lazy">
+            <div class="product-body">
+              <h3>Nex Play 50</h3>
+              <ul class="specs" role="list">
+                <li><i class="fa-solid fa-ruler"></i> Pile Height: ~1.25"</li>
+                <li><i class="fa-solid fa-weight-hanging"></i> Face Weight: ~50 oz</li>
+                <li><i class="fa-solid fa-helmet-safety"></i> Ideal over shock pad</li>
+                <li><i class="fa-solid fa-up-right-and-down-left-from-center"></i> Roll: 15' width</li>
+              </ul>
+              <a class="link" href="#" aria-disabled="true">Request spec sheet</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHY ============ -->
+    <section id="why" class="section why" aria-labelledby="why-title">
+      <div class="container">
+        <h2 id="why-title">Why Nex Turf</h2>
+        <div class="benefits">
+          <article class="benefit"><i class="fa-solid fa-hand-holding-dollar"></i><h3>Installer‑First Pricing</h3><p>Transparent, competitive pricing built to help your bids win and your margins hold.</p></article>
+          <article class="benefit"><i class="fa-solid fa-truck"></i><h3>Fast Logistics</h3><p>Regional inventory and smart routing to keep your projects moving.</p></article>
+          <article class="benefit"><i class="fa-solid fa-headset"></i><h3>Real Support</h3><p>Talk to humans who know turf—specs, install tips, and job planning.</p></article>
+          <article class="benefit"><i class="fa-solid fa-certificate"></i><h3>Consistent Quality</h3><p>Reliable batch‑to‑batch color and fiber performance you can trust.</p></article>
+          <article class="benefit"><i class="fa-solid fa-seedling"></i><h3>Eco‑Minded Options</h3><p>Low‑sheen fibers and recyclable backing options on select lines.</p></article>
+          <article class="benefit"><i class="fa-solid fa-shield"></i><h3>Warranty Coverage</h3><p>Limited warranties available—ask us for line‑specific details.</p></article>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-green" href="#contact">Talk to a turf specialist</a>
+          <a class="btn btn-outline" href="#products">Explore products</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="section contact" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div class="contact-card">
+          <h2 id="contact-title">Get Pricing & Availability</h2>
+          <!-- For CodePen demos, mailto: is simplest; swap to your backend when ready -->
+          <form class="lead-form" action="mailto:info@nexturf.com" method="post" enctype="text/plain">
+            <div class="grid-2">
+              <label>First name<input type="text" name="first_name" required></label>
+              <label>Last name<input type="text" name="last_name" required></label>
+            </div>
+            <div class="grid-2">
+              <label>Company<input type="text" name="company"></label>
+              <label>Phone<input type="tel" name="phone"></label>
+            </div>
+            <label>Email<input type="email" name="email" required></label>
+            <label>Project type
+              <select name="project_type">
+                <option>Residential</option><option>Commercial</option><option>Pet</option><option>Playground</option><option>Sports</option><option>Other</option>
+              </select>
+            </label>
+            <label>Your message<textarea name="message" rows="4" placeholder="Timelines, square footage, preferred lines…"></textarea></label>
+            <button class="btn btn-green" type="submit">Request quote</button>
+            <p class="tiny">By submitting, you agree to be contacted about Nex Turf products and services.</p>
+          </form>
+        </div>
+
+        <aside class="contact-info" aria-label="Company details">
+          <h3>Talk with us</h3>
+          <ul class="contact-list">
+            <li><i class="fa-solid fa-phone"></i> <a href="tel:+14790000000">(479) 000‑0000</a></li>
+            <li><i class="fa-solid fa-envelope"></i> <a href="mailto:info@nexturf.com">info@nexturf.com</a></li>
+            <li><i class="fa-solid fa-location-dot"></i> Northwest Arkansas & surrounding regions</li>
+            <li><i class="fa-solid fa-clock"></i> Mon–Fri · 8:00a–5:00p CT</li>
+          </ul>
+          <h4>Service Areas</h4>
+          <p>Fayetteville, Springdale, Rogers, Bentonville, Tulsa, Springfield, Joplin—plus regional freight.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="https://i.ibb.co/6JNWZQ5w/Nex-Turf-Logo-Transparent.png" alt="Nex Turf" width="150" height="36" />
+        <p>Premium synthetic turf supply for installers, developers, and pros. Built on service.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="#industries">Applications</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#why">Solutions</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="footer-cta">
+        <h4>Ready to start?</h4>
+        <a class="btn btn-green" href="#contact">Get a Quote</a>
+        <div class="socials">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="legal"><div class="container"><small>© <span id="year"></span> Nex Turf. All rights reserved.</small></div></div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

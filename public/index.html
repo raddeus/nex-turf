@@ -26,11 +26,10 @@
     <!-- Top phone bar -->
     <div class="topbar">
       <div class="container topbar-inner">
-        <a class="phone" href="tel:+14790000000"><i class="fa-solid fa-phone"></i> <strong>(479) 000‑0000</strong></a>
+        <a class="phone" href="tel:+14178395464"><i class="fa-solid fa-phone"></i> <strong>(417) 839-5464</strong></a>
         <div class="topbar-right">
           <a href="#contact" class="tiny-link"><i class="fa-solid fa-envelope"></i> Email</a>
-          <a href="#contact" class="tiny-link"><i class="fa-solid fa-location-dot"></i> Service Areas</a>
-          <button class="tiny-btn" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+          <a href="#service-areas" class="tiny-link"><i class="fa-solid fa-location-dot"></i> Service Areas</a>
         </div>
       </div>
     </div>
@@ -39,7 +38,7 @@
     <div class="brandbar">
       <div class="container brandbar-inner">
         <a class="brand" href="#home" aria-label="Nex Turf home">
-          <img src="https://i.ibb.co/6JNWZQ5w/Nex-Turf-Logo-Transparent.png" alt="Nex Turf" width="170">
+          <img src="https://i.ibb.co/6JNWZQ5w/Nex-Turf-Logo-Transparent.png" alt="Nex Turf" width="200">
         </a>
       </div>
     </div>
@@ -91,18 +90,6 @@
         <div class="hero-ctas">
           <a class="btn btn-green" href="#contact">Get a Quote</a>
           <a class="btn btn-outline-cream" href="#products">Browse Products</a>
-        </div>
-      </div>
-
-      <!-- Partner logos strip (placeholders; replace as needed) -->
-      <div class="partners">
-        <div class="container partners-inner">
-          <img src="https://dummyimage.com/120x40/2b2b2b/ffffff&text=Zoo" alt="Partner logo">
-          <img src="https://dummyimage.com/120x40/2b2b2b/ffffff&text=Hotel" alt="Partner logo">
-          <img src="https://dummyimage.com/120x40/2b2b2b/ffffff&text=Yale" alt="Partner logo">
-          <img src="https://dummyimage.com/120x40/2b2b2b/ffffff&text=Retail" alt="Partner logo">
-          <img src="https://dummyimage.com/120x40/2b2b2b/ffffff&text=Auto" alt="Partner logo">
-          <img src="https://dummyimage.com/120x40/2b2b2b/ffffff&text=Disney" alt="Partner logo">
         </div>
       </div>
 
@@ -218,7 +205,7 @@
           <article class="benefit"><i class="fa-solid fa-shield"></i><h3>Warranty Coverage</h3><p>Limited warranties available—ask us for line‑specific details.</p></article>
         </div>
         <div class="cta-row">
-          <a class="btn btn-green" href="#contact">Talk to a turf specialist</a>
+          <button class="btn btn-green" id="contact-modal-trigger">Talk to a turf specialist</button>
           <a class="btn btn-outline" href="#products">Explore products</a>
         </div>
       </div>
@@ -254,12 +241,12 @@
         <aside class="contact-info" aria-label="Company details">
           <h3>Talk with us</h3>
           <ul class="contact-list">
-            <li><i class="fa-solid fa-phone"></i> <a href="tel:+14790000000">(479) 000‑0000</a></li>
+            <li><i class="fa-solid fa-phone"></i> <a href="tel:+14178395464">(417) 839-5464</a></li>
             <li><i class="fa-solid fa-envelope"></i> <a href="mailto:info@nexturf.com">info@nexturf.com</a></li>
             <li><i class="fa-solid fa-location-dot"></i> Northwest Arkansas & surrounding regions</li>
             <li><i class="fa-solid fa-clock"></i> Mon–Fri · 8:00a–5:00p CT</li>
           </ul>
-          <h4>Service Areas</h4>
+          <h4 id="service-areas">Service Areas</h4>
           <p>Fayetteville, Springdale, Rogers, Bentonville, Tulsa, Springfield, Joplin—plus regional freight.</p>
         </aside>
       </div>
@@ -270,7 +257,7 @@
   <footer class="footer" role="contentinfo">
     <div class="container footer-grid">
       <div class="footer-brand">
-        <img src="https://i.ibb.co/6JNWZQ5w/Nex-Turf-Logo-Transparent.png" alt="Nex Turf" width="150" height="36" />
+        <img src="https://i.ibb.co/6JNWZQ5w/Nex-Turf-Logo-Transparent.png" alt="Nex Turf" width="150"  />
         <p>Premium synthetic turf supply for installers, developers, and pros. Built on service.</p>
       </div>
       <nav class="footer-nav" aria-label="Footer">
@@ -295,6 +282,76 @@
     <div class="legal"><div class="container"><small>© <span id="year"></span> Nex Turf. All rights reserved.</small></div></div>
   </footer>
 
+  <!-- ============ CONTACT MODAL ============ -->
+  <div id="contact-modal" class="modal" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-dialog" role="dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="modal-title"><i class="fa-solid fa-headset"></i> Talk to a Turf Specialist</h2>
+          <button class="modal-close" aria-label="Close modal">
+            <i class="fa-solid fa-times"></i>
+          </button>
+        </div>
+        
+        <div class="modal-body">
+          <div class="modal-intro">
+            <p>Ready to discuss your project? Our turf specialists are here to help with product selection, pricing, and logistics.</p>
+          </div>
+          
+          <div class="modal-contact-grid">
+            <div class="modal-contact-card">
+              <h3><i class="fa-solid fa-phone"></i> Call Us</h3>
+              <a href="tel:+14178395464" class="contact-link phone-link">
+                <span class="contact-number">(417) 839-5464</span>
+                <span class="contact-label">Click to call now</span>
+              </a>
+              <p class="contact-hours">
+                <i class="fa-solid fa-clock"></i> Mon–Fri · 8:00a–5:00p CT
+              </p>
+            </div>
+            
+            <div class="modal-contact-card">
+              <h3><i class="fa-solid fa-envelope"></i> Email Us</h3>
+              <a href="mailto:info@nexturf.com" class="contact-link email-link">
+                <span class="contact-email">info@nexturf.com</span>
+                <span class="contact-label">Send us a message</span>
+              </a>
+              <p class="contact-note">
+                <i class="fa-solid fa-reply"></i> We'll get back to you soon
+              </p>
+            </div>
+          </div>
+          
+          <div class="modal-service-areas">
+            <h3><i class="fa-solid fa-location-dot"></i> Service Areas</h3>
+            <div class="service-locations">
+              <div class="location-group">
+                <h4>Arkansas</h4>
+                <p>Fayetteville, Springdale, Rogers, Bentonville</p>
+              </div>
+              <div class="location-group">
+                <h4>Oklahoma</h4>
+                <p>Tulsa</p>
+              </div>
+              <div class="location-group">
+                <h4>Missouri</h4>
+                <p>Springfield, Joplin</p>
+              </div>
+            </div>
+            <p class="freight-note"><i class="fa-solid fa-truck"></i> Regional freight available beyond these areas</p>
+          </div>
+        </div>
+        
+        <div class="modal-footer">
+          <p class="modal-cta-text">Prefer to request a quote online?</p>
+          <button class="btn btn-outline modal-scroll-to-form">Go to Quote Form</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="script.js"></script>
 </body>
 </html>

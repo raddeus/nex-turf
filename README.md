@@ -18,7 +18,7 @@
 - 🛠️ **Zero Config** - No webpack, no build steps, no headaches
 - 📱 **Mobile Ready** - Responsive out of the box
 - 🎨 **Clean AF** - Minimal, modern CSS that actually looks good
-- 🔧 **Developer Friendly** - Hot reload? Who needs it when it's this simple
+- 🔧 **Developer Friendly** - Live reload for instant development feedback
 - 🌐 **Cross Platform** - Works on Windows, Mac, Linux, and probably your smart fridge
 
 ---
@@ -41,6 +41,9 @@ npm install
 
 # Fire it up! 🔥
 npm start
+
+# Or for development with live reload:
+npm run dev
 ```
 
 **Boom!** Your server is now running at `http://localhost:3000`
@@ -67,7 +70,8 @@ nex-turf/
 | Command | What it does |
 |---------|-------------|
 | `npm start` | Starts the server in production mode |
-| `npm run dev` | Starts the server (same as start, we keep it simple) |
+| `npm run dev` | Starts development server with live reload 🔄 |
+| `npm run watch` | Same as dev, but with nodemon for server restart |
 | `npm test` | Reminds you to write tests (coming soon™️) |
 
 ---
@@ -120,9 +124,23 @@ Want to customize? Edit `public/styles.css` and make it your own.
 ## 🚀 Deployment
 
 ### Local Development
+
+**Production mode:**
 ```bash
 npm start
 ```
+
+**Development with live reload (recommended):**
+```bash
+npm run dev
+```
+
+This will:
+- 🚀 Start the Express server on port 3000
+- 🔄 Launch BrowserSync on port 3001 with live reload
+- 📱 Automatically open your browser
+- ⚡ Instantly refresh when you edit HTML, CSS, or JS files
+- 🔔 Show helpful notifications when files reload
 
 ### Production Deployment
 

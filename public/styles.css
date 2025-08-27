@@ -150,7 +150,7 @@ small,.tiny{ font-size:.82rem; color:var(--muted); }
 .partners img:hover{ opacity:1; filter:none; }
 
 /* Audience pill bar */
-.audience{ background:#12170b; padding:10px; }
+.audience{ background:#12170b; padding:25px; }
 .audience-inner{
   display:flex; gap:10px; flex-wrap:wrap; align-items:center; justify-content:center;
 }
@@ -175,9 +175,9 @@ small,.tiny{ font-size:.82rem; color:var(--muted); }
 
 /* ================= PRODUCTS ================= */
 .product-grid{ margin-top:24px; display:grid; grid-template-columns: repeat(3, 1fr); gap:18px; }
-.product{ background:white; border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); display:grid; grid-template-rows:auto 1fr; }
+.product{ background:white; border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); display:grid; grid-template-rows:auto 1fr; padding:16px; }
 .product img{ aspect-ratio:16/9; object-fit:cover; width:100%; }
-.product-body{ padding:18px; }
+.product-body{ padding:24px; }
 .specs{ list-style:none; padding:0; margin:.5rem 0 0; display:grid; gap:.5rem; color:#3a3a3a; }
 .specs i{ color:var(--olive); margin-right:.4rem; }
 

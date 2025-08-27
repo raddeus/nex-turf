@@ -38,6 +38,9 @@ document.addEventListener('DOMContentLoaded', function() {
         // Skip if we already handled service areas links
         if (link.getAttribute('href') === '#service-areas') return;
         
+        // Skip if this is a modal trigger button (they handle their own preventDefault)
+        if (link.id === 'contact-modal-trigger' || link.id === 'contact-modal-trigger-nav') return;
+        
         link.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
             
@@ -61,6 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ================= CONTACT MODAL ================= 
     const modal = document.getElementById('contact-modal');
     const modalTrigger = document.getElementById('contact-modal-trigger');
+    const modalTriggerNav = document.getElementById('contact-modal-trigger-nav');
     const modalClose = document.querySelector('.modal-close');
     const modalBackdrop = document.querySelector('.modal-backdrop');
     const modalScrollToForm = document.querySelector('.modal-scroll-to-form');
@@ -84,13 +88,20 @@ document.addEventListener('DOMContentLoaded', function() {
         modal.setAttribute('aria-hidden', 'true');
         body.style.overflow = ''; // Restore scrolling
         
-        // Return focus to the trigger button
-        modalTrigger.focus();
+        // Don't return focus to avoid unwanted scrolling
+        // The user can navigate normally after closing
     }
     
     // Event listeners for opening modal
     if (modalTrigger) {
         modalTrigger.addEventListener('click', function(e) {
+            e.preventDefault();
+            openModal();
+        });
+    }
+    
+    if (modalTriggerNav) {
+        modalTriggerNav.addEventListener('click', function(e) {
             e.preventDefault();
             openModal();
         });

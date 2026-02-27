@@ -198,6 +198,7 @@ small,.tiny{ font-size:.82rem; color:var(--muted); }
 /* ================= CONTACT ================= */
 .contact-grid{ display:grid; grid-template-columns: 1.1fr .9fr; gap:22px; align-items:start; }
 .contact-card{ background:white; border-radius:var(--radius); padding:22px; box-shadow:var(--shadow); }
+.gform-embed{ width:100%; min-height:680px; border:none; display:block; }
 .lead-form label{ font-weight:800; display:block; margin:.5rem 0 .25rem; }
 .lead-form input, .lead-form select, .lead-form textarea{
   width:100%; padding:.85rem .9rem; border-radius:10px; border:1px solid #d8d4c6; background:#fffdfa; font:inherit;
@@ -525,23 +526,72 @@ small,.tiny{ font-size:.82rem; color:var(--muted); }
   .modal {
     padding: 0.5rem;
   }
-  
+
   .modal-dialog {
     max-height: 95vh;
   }
-  
+
   .modal-header,
   .modal-body,
   .modal-footer {
     padding: 1.5rem 1rem;
   }
-  
+
   .modal-contact-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
-  
+
   .service-locations {
     grid-template-columns: 1fr;
   }
+}
+
+/* ================= FORM MODAL ================= */
+.modal-dialog-wide {
+  max-width: 700px;
+}
+
+.form-modal-body {
+  padding: 0;
+}
+
+.form-modal-body .gform-embed {
+  display: block;
+  width: 100%;
+  min-height: 680px;
+  border: none;
+}
+
+/* ================= CONTACT CARD (no iframe) ================= */
+.contact-card-desc {
+  font-size: 1.1rem;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.contact-card-perks {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
+
+.contact-card-perks li {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  font-weight: 600;
+  color: var(--deep);
+  font-size: 1rem;
+}
+
+.contact-card-perks li i {
+  color: var(--olive);
+  font-size: 1.1rem;
+  width: 1.2em;
+  text-align: center;
 }

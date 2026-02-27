@@ -216,26 +216,13 @@
       <div class="container contact-grid">
         <div class="contact-card">
           <h2 id="contact-title">Get Pricing & Availability</h2>
-          <!-- For CodePen demos, mailto: is simplest; swap to your backend when ready -->
-          <form class="lead-form" action="mailto:info@nex-turf.com" method="post" enctype="text/plain">
-            <div class="grid-2">
-              <label>First name<input type="text" name="first_name" required></label>
-              <label>Last name<input type="text" name="last_name" required></label>
-            </div>
-            <div class="grid-2">
-              <label>Company<input type="text" name="company"></label>
-              <label>Phone<input type="tel" name="phone"></label>
-            </div>
-            <label>Email<input type="email" name="email" required></label>
-            <label>Project type
-              <select name="project_type">
-                <option>Residential</option><option>Commercial</option><option>Pet</option><option>Playground</option><option>Sports</option><option>Other</option>
-              </select>
-            </label>
-            <label>Your message<textarea name="message" rows="4" placeholder="Timelines, square footage, preferred lines…"></textarea></label>
-            <button class="btn btn-green submit-right" type="submit">Request Free Quote</button>
-            <p class="tiny">By submitting, you agree to be contacted about Nex Turf products and services.</p>
-          </form>
+          <p class="contact-card-desc">Tell us about your project and we'll get back to you with pricing and availability — fast.</p>
+          <ul class="contact-card-perks">
+            <li><i class="fa-solid fa-bolt"></i> Quick turnaround on quotes</li>
+            <li><i class="fa-solid fa-hand-holding-dollar"></i> Installer-first pricing</li>
+            <li><i class="fa-solid fa-headset"></i> Real people, real answers</li>
+          </ul>
+          <button class="btn btn-green" id="form-modal-trigger">Request Free Estimate</button>
         </div>
 
         <aside class="contact-info" aria-label="Company details">
@@ -358,6 +345,30 @@
         <div class="modal-footer">
           <p class="modal-cta-text">Prefer to request a quote online?</p>
           <button class="btn btn-outline modal-scroll-to-form">Go to Quote Form</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ FORM MODAL ============ -->
+  <div id="form-modal" class="modal" aria-labelledby="form-modal-title" aria-hidden="true">
+    <div class="modal-backdrop form-modal-backdrop"></div>
+    <div class="modal-dialog modal-dialog-wide" role="dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="form-modal-title">Get Pricing & Availability</h2>
+          <button class="modal-close form-modal-close" aria-label="Close modal">
+            <i class="fa-solid fa-times"></i>
+          </button>
+        </div>
+        <div class="modal-body form-modal-body">
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSePsMKjpXoVaL1nzJu-o3nMZoG0uO4vtejuKuonktOm-VvxcQ/viewform?embedded=true"
+            class="gform-embed"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+            title="Get Pricing & Availability">Loading…</iframe>
         </div>
       </div>
     </div>

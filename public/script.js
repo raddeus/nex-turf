@@ -127,18 +127,55 @@ document.addEventListener('DOMContentLoaded', function() {
     if (modalScrollToForm) {
         modalScrollToForm.addEventListener('click', function() {
             closeModal();
-            
-            // Scroll to contact form after modal closes
+
+            // Open the form modal after contact modal closes
             setTimeout(() => {
-                const contactSection = document.getElementById('contact');
-                if (contactSection) {
-                    contactSection.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start',
-                        inline: 'nearest'
-                    });
-                }
+                openFormModal();
             }, 300);
         });
     }
+
+    // ================= FORM MODAL =================
+    const formModal = document.getElementById('form-modal');
+    const formModalTrigger = document.getElementById('form-modal-trigger');
+    const formModalClose = document.querySelector('.form-modal-close');
+    const formModalBackdrop = document.querySelector('.form-modal-backdrop');
+
+    function openFormModal() {
+        if (!formModal) return;
+        formModal.classList.add('modal-open');
+        formModal.setAttribute('aria-hidden', 'false');
+        body.style.overflow = 'hidden';
+        setTimeout(() => {
+            if (formModalClose) formModalClose.focus();
+        }, 300);
+    }
+
+    function closeFormModal() {
+        if (!formModal) return;
+        formModal.classList.remove('modal-open');
+        formModal.setAttribute('aria-hidden', 'true');
+        body.style.overflow = '';
+    }
+
+    if (formModalTrigger) {
+        formModalTrigger.addEventListener('click', function(e) {
+            e.preventDefault();
+            openFormModal();
+        });
+    }
+
+    if (formModalClose) {
+        formModalClose.addEventListener('click', closeFormModal);
+    }
+
+    if (formModalBackdrop) {
+        formModalBackdrop.addEventListener('click', closeFormModal);
+    }
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && formModal && formModal.classList.contains('modal-open')) {
+            closeFormModal();
+        }
+    });
 });
